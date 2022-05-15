@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ProductService } from '../services/product.service';
-import { IProduct } from './Product';
+import { ProductService } from '../../services/product.service';
+import { IProduct } from '../../interfaces/Product';
 
 @Component({
     selector: 'pm-products',
@@ -9,7 +9,7 @@ import { IProduct } from './Product';
     styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit, OnDestroy {
-    pageTitle: string = 'Acme Product Management';
+    pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;

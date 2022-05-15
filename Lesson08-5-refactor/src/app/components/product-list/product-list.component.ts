@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ProductService } from '../services/product.service';
-import { IProduct } from './Product';
+import { ProductService } from '../../services/product.service';
+import { IProduct } from '../../interfaces/Product';
 
 @Component({
     selector: 'pm-products',
