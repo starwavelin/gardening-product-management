@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRouterModule } from './app.router.module';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AppRouterModule } from './app.router.module';
     ConvertToSpacesPipe,
     ProductDetailComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
