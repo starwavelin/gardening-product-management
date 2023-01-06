@@ -10,8 +10,18 @@ import { StarComponent } from './components/star/star.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { AppRouterModule } from './app.router.module';
+// import { AppRouterModule } from './app.router.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const routes: Routes = [
+  { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'welcome', component: HomeComponent },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent },
+];
 
 @NgModule({
   declarations: [
@@ -28,7 +38,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRouterModule
+    // AppRouterModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
