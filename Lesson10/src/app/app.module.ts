@@ -13,11 +13,12 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 // import { AppRouterModule } from './app.router.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ProductDetailGuard } from './guards/product-detail.guard';
 
 
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
-  { path: 'products/:id', component: ProductDetailComponent },
+  { path: 'products/:id', component: ProductDetailComponent, canActivate: [ProductDetailGuard] },
   { path: 'welcome', component: HomeComponent },
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
