@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ProductModule } from './product/product.module';
 import { AppRouterModule } from './app-router/app-router.module';
 
@@ -13,8 +12,7 @@ import { AppRouterModule } from './app-router/app-router.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent,
-    WelcomeComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
